@@ -4,8 +4,7 @@
 
 /*
 When doing these tasks, we recommend using console.log to test the output of your code to make sure it works correctly.
-This will usually entail console logging the answer directly or console logging the invocation (call) of the function so when it
-returns a value, that value will be logged to the console.  An example of this would be:  console.log(theFunction(value1,value2))
+This will usually entail console logging the answer directly or console logging the invocation (call) of the function so when it returns a value, that value will be logged to the console.  An example of this would be:  console.log(theFunction(value1,value2))
 */
 
 /*
@@ -17,6 +16,9 @@ Do the following:
 
    HINT: no function required
 */
+const votingAge = '18';
+console.log(votingAge, 'task 1a solved');
+
 
 
 
@@ -30,7 +32,12 @@ Do the following:
 
    HINT: no function required
 */
-
+let dog1 = 'ruby';
+let dog2 = 'drake';
+if(dog1 === 'ruby'){
+  dog1 = 'drake';
+}
+console.log(dog1, 'task 1b solved');
 
 
 
@@ -45,7 +52,10 @@ Do the following:
 
    HINT: look up the Number method
 */
+const string1 = "1999";
+Number("1999");
 
+console.log("1999", 'task 1c solved');
 
 
 
@@ -58,10 +68,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+    return a * b;
   }
-
+console.log(multiply(4,5), 'task 1d solved');
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -74,10 +84,10 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(dog, human){
+    return human * dog;
 }
-
+console.log(dogYears(7, 32), 'task 2 solved');
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -107,9 +117,43 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight, age){
+  if(weight <= 5 && age >= 1){
+    return 0.05*weight
+  }else if(weight >= 6 && weight <= 10 && age >= 1){
+    return 0.04*weight
+  }else if(weight >= 11 && weight <= 15 && age >= 1){
+    return 0.03*weight
+  }else if(weight > 15){
+    return 0.02*weight
+  }else if(weight <= 5 && age >= 0.16 && age <= 0.33){
+    return 0.10*weight
+  }else if(weight >= 6 && weight <= 10 && age >= 0.16 && age <= 0.33){
+    return 0.10*weight
+  }else if(weight >= 11 && weight <= 15 && age >= 0.16 && age <= 0.33){
+    return 0.10*weight
+  }else if(weight > 15 && age >= 0.16 && age <= 0.33){
+    return 0.10*weight
+  }else if(weight <= 5 && age >= 0.33 && age <= 0.58){
+    return 0.05*weight
+  }else if(weight >= 6 && weight <= 10 && age >= 0.33 && age <= 0.58){
+    return 0.05*weight
+  }else if(weight >= 11 && weight <= 15 && age >= 0.33 && age <= 0.58){
+    return 0.05*weight
+  }else if(weight > 15 && age >= 0.33 && age <= 0.58){
+    return 0.05*weight
+  }else if(weight <= 5 && age >= 0.58 && age <= 1){
+    return 0.04*weight
+  }else if(weight >= 6 && weight <= 10 && age >= 0.58 && age <= 1){
+    return 0.04*weight
+  }else if(weight >= 11 && weight <= 15 && age >= 0.58 && age <= 1){
+    return 0.04*weight
+  }else if(weight > 15 && age >= 0.58 && age <= 1){
+    return 0.04*weight
   }
+}
+
+console.log(hungryDog (25, 2), 'task 3 solved');
 
 
 
@@ -170,9 +214,10 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
-  }
+function miles(km, miles){
+  return miles = km*0.62137
+}
+console.log(miles(150), 'task 5a solved');
 
 
 
@@ -184,10 +229,10 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
-  }
- 
+function feet(cm, feet){
+  return feet = cm*0.032808
+}
+console.log(feet(200), 'task 5b solved');
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -200,9 +245,15 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(){
+  for(let i = 99; i > 1; i--){
+    if(i <= 99){
+      return (i + ' bottles of soda on the wall, '+ i + ' bottles of soda, take one down pass it around '+ i-1 + ' bottles of soda on the wall');
+    }
   }
+}
+    
+console.log(annoyingSong());
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -220,10 +271,20 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(grade){
+  if (grade < 100 && grade > 90){
+    return 'you got an A';
+  }else if (grade < 89 && grade > 80){
+    return 'you got a B';
+  }else if (grade < 79 && grade > 70){
+    return 'you got a C';
+  }else if (grade < 69 && grade > 60){
+    return 'you got a D';
+  }else if (grade < 59){
+    return 'you got an F';
   }
-  
+}
+console.log(grade(84), 'task 7 solved');
   
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
